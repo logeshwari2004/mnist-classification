@@ -104,14 +104,18 @@ model.fit(X_train_scaled ,y_train_onehot, epochs=5,batch_size=64,validation_data
 
 metrics = pd.DataFrame(model.history.history)
 
+print('Logeshwari.P 212221230055')
 metrics.head()
 
+print('Logeshwari.P 212221230055')
 metrics[['accuracy','val_accuracy']].plot()
 
+print('Logeshwari.P 212221230055')
 metrics[['loss','val_loss']].plot()
 
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
 
+print('Logeshwari.P 212221230055')
 print(confusion_matrix(y_test,x_test_predictions))
 
 print(classification_report(y_test,x_test_predictions))
@@ -128,6 +132,7 @@ x_single_prediction = np.argmax(model.predict(img_28_gray_scaled.reshape(1,28,28
 
 print(x_single_prediction)
 
+print('Logeshwari.P 212221230055')
 plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 
 img_28_gray_inverted = 255.0-img_28_gray
@@ -141,24 +146,25 @@ print(x_single_prediction)
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![download](https://github.com/logeshwari2004/mnist-classification/assets/94211349/1eeb6fd0-cdbb-4645-9d2a-37a3143cda13)
 
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/94c7f35a-054b-4499-81fe-26966ae2c97e)
 
-![download](https://github.com/logeshwari2004/mnist-classification/assets/94211349/530a2115-6177-4638-8b7e-d920160d595b)
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/85ba00a6-5b7f-441a-8f99-34248e2dbfde)
+
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/e1cc7c71-5114-46ca-8b5b-65d5e176aa15)
 
 ### Classification Report
 
-![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/834d8f28-3c55-4288-a9ac-b00a3c3b0943)
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/ceff57a5-3cc6-447f-9e2f-a50c23bec6d2)
 
 
 ### Confusion Matrix
-
-![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/b1894930-13a3-4913-8347-8e45d121a781)
-
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/e3e8b5b7-93f1-4c59-acc9-309b05e0bdc8)
 
 ### New Sample Data Prediction
 
-![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/6ca67812-5d0a-434a-bf20-3da0a3ea3a23)
+![image](https://github.com/logeshwari2004/mnist-classification/assets/94211349/bc92e5f7-93f5-49eb-b26f-0639e8d82d92)
+
 
 
 ## RESULT
